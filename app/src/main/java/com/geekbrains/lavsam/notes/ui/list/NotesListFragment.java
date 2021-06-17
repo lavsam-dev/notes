@@ -21,12 +21,7 @@ import java.util.List;
 
 public class NotesListFragment extends Fragment {
 
-    public interface OnNotesClicked {
-        void onNotesClicked(Notes note);
-    }
-
     private NotesRepository notesRepository;
-
     private OnNotesClicked onNotesClicked;
 
     @Override
@@ -65,7 +60,7 @@ public class NotesListFragment extends Fragment {
 
         List<Notes> notes = notesRepository.getNotes();
 
-        for (Notes note: notes) {
+        for (Notes note : notes) {
             View itemView = LayoutInflater.from(requireContext()).inflate(R.layout.item_notes, notesList, false);
 
             itemView.setOnClickListener(new View.OnClickListener() {
@@ -95,5 +90,9 @@ public class NotesListFragment extends Fragment {
     @Override
     public void onStop() {
         super.onStop();
+    }
+
+    public interface OnNotesClicked {
+        void onNotesClicked(Notes note);
     }
 }
