@@ -30,4 +30,5 @@
             tools:text="@string/text_b_guzka" />
     </ScrollView>
 
+
 </LinearLayout>
