@@ -16,6 +16,7 @@
         tools:text="@string/head_b_guzka" />
 
     <ScrollView
+        android:id="@+id/notes_text_scroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fillViewport="true"
